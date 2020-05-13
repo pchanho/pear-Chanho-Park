@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 // const BASE_URL = "https://info30005-pear.herokuapp.com";
 
 //Temporary base url before update heroku server
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://info30005-pear-frontend.herokuapp.com";
 
 function getConversations() {
     const endpoint = BASE_URL + '/conversation/readAll';
