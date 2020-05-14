@@ -4,7 +4,7 @@ import logo from "../img/Pear_logo.png";
 import { NavLink } from "react-router-dom";
 
 
-export default function LandingPage() {
+export default function Landing() {
     return (
         <div>
             <section className="landing">

@@ -1,14 +1,12 @@
-/*TODO
-*  1. Login feature
-*  2. */
+/*TODO*/
 
 import { useState, useEffect } from "react";
 
-// const BASE_URL = "https://info30005-pear.herokuapp.com";
-
-//Temporary base url before update heroku server
 const BASE_URL = "https://info30005-pear.herokuapp.com";
 
+/*----------------
+ Conversation API
+----------------*/
 function getConversations() {
     const endpoint = BASE_URL + '/conversation/readAll';
     console.log("getConversations");
@@ -77,7 +75,9 @@ export function addConversation(conversation) {
     }).then(res => window.location.reload());
 }
 
-
+/*----------------
+ Account API
+----------------*/
 
 
 

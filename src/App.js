@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import LandingPage from "./pages/LandingPage";
+import Landing from "./pages/Landing";
 import Account from "./pages/Account";
-import Conversation from "./pages/Conversation/ConversationLanding";
 import Join from "./pages/Conversation/Join";
 import Create from "./pages/Conversation/Create";
 import Chat from "./pages/Conversation/Chat";
@@ -20,7 +19,7 @@ export default function App() {
           renders the first one that matches the current URL. */}
         <Switch>
           <Route exact path="/">
-            <LandingPage />
+            <Landing />
           </Route>
 
           <Route path="/account">
