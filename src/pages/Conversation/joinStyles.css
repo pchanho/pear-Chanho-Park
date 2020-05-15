@@ -62,3 +62,17 @@
 .btn-join:hover {
     transform: scale(1.2) !important;
 }
+
+.conversation-create{
+    padding: 150px 150px;
+}
+
+.conversation-create-content{
+    width: 30%;
+    text-align: center;
+    align-items: center;
+}
+
+.btn-success{
+
+}
