@@ -79,5 +79,61 @@ export function addConversation(conversation) {
  Account API
 ----------------*/
 
+export function addAccount(account) {
+    const { firstName, lastName, email, birthday, password } = account;
+    if (!firstName || !lastName || !email || !birthday || !password) {
+        alert("must include all fields");
+        return;
+    }
+
+    console.log({
+        firstName,
+        lastName
+    });
+
+    const endpoint = BASE_URL + `/account/create/`;
+    console.log("addAccount");
+    // console.log(author);
+    return fetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            firstName,
+            lastName,
+            email, 
+            birthday, 
+            password
+        })
+    }).then(res => window.location.reload());
+}
+
+export function accountLogin(login) {
+    const { email, password } = login;
+    if (!email || !password) {
+        alert("must include all fields");
+        return;
+    }
+
+    console.log({
+        email,
+        password
+    });
+
+    const endpoint = BASE_URL + `/account/login/`;
+    console.log("login");
+
+    return fetch(endpoint, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            email, 
+            password
+        })
+    }).then(res => window.location.reload());
+}
 
 
