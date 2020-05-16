@@ -26,7 +26,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5b1df608-f79b-41e5-a70f-3f7bdd2de550" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/Create.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
       <updated>1589542652474</updated>
       <workItem from="1589542653785" duration="1489000" />
       <workItem from="1589601541785" duration="6307000" />
-      <workItem from="1589609814383" duration="1418000" />
+      <workItem from="1589609814383" duration="3665000" />
     </task>
     <servers />
   </component>
@@ -98,5 +99,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1589465356190" />
+    <state x="1777" y="-102" width="670" height="676" key="search.everywhere.popup" timestamp="1589613076581">
+      <screen x="1152" y="-337" width="1920" height="1057" />
+    </state>
+    <state x="1777" y="-102" width="670" height="676" key="search.everywhere.popup/1152.-337.1920.1057/0.23.1152.697@1152.-337.1920.1057" timestamp="1589613076581" />
   </component>
 </project>

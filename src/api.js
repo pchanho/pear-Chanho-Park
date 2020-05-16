@@ -50,9 +50,9 @@ export function useConversations() {
 
 
 export function addConversation(conversation) {
-    const { topic, category, participantsId } = conversation;
+    const { topic, category, image } = conversation;
     if (!topic || !category) {
-        alert("must include all fields");
+        alert("must include all required fields");
         return;
     }
 
@@ -72,7 +72,7 @@ export function addConversation(conversation) {
         body: JSON.stringify({
             topic,
             category,
-            participantsId
+            image
         })
     }).then(res => window.location.reload());
 }
