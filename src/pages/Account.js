@@ -84,7 +84,7 @@ function AccountAddForm() {
               setPassword(event.target.value);
             }}
           /> <br />
-        <input type="submit" value="Submit" onClick={onSubmit}/>
+        <input type="submit" value="Submit" className='account-btn' onClick={onSubmit}/>
       </form>
     </div>
   );
@@ -125,7 +125,7 @@ function Login() {
                   setPassword(event.target.value);
                 }}
               /> <br />
-            <button type="submit" onClick={onLogin}>Login</button>
+            <button type="submit" onClick={onLogin} className='account-btn'>Login</button>
           </form>
         </div>
   );
