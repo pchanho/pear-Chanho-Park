@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { addAccount, accountLogin} from "../api";
 import "../accountStyles.css";
+import Landing from "./Landing";
 
 export default function Account() {
   return (
@@ -22,23 +23,26 @@ function AccountAddForm() {
   const [password, setPassword] = useState("");
   
   function onSubmit() {
-      addAccount({
-          firstName,
-          lastName,
-          email, 
-          birthday, 
-          password
-      });
+    addAccount({
+      firstName,
+      lastName,
+      email, 
+      birthday, 
+      password
+    });
+  }
 
-      window.location.reload();
+  function handleSubmit(event) {
+    event.preventDefault();
+    this.props.history.push('/Landing');
   }
 
   return (
-    <div class="create">
+    <div className="create">
       <h1>Create Account</h1>
 
-      <form>
-        <label for="firstName">First Name</label>
+      <form onSubmit={handleSubmit}>
+        <label>First Name</label>
           <input 
             type="text" 
             name="firstName" 
@@ -47,7 +51,7 @@ function AccountAddForm() {
               setFirstName(event.target.value);
             }}
           /> <br />
-        <label for="lastName">Last Name</label>
+        <label>Last Name</label>
           <input 
             type="text" 
             name="lastName" 
@@ -56,7 +60,7 @@ function AccountAddForm() {
               setLastName(event.target.value);
             }}
           /> <br />
-        <label for="email">Email</label>
+        <label>Email</label>
           <input 
             type="email" 
             name="email" 
@@ -65,7 +69,7 @@ function AccountAddForm() {
               setEmail(event.target.value);
             }}
           /> <br />
-        <label for="birthday">Date of Birth</label>
+        <label>Date of Birth</label>
           <input 
             type="date" 
             name="birthday"
@@ -75,7 +79,7 @@ function AccountAddForm() {
               setBirthday(event.target.value);
             }}
           /> <br />
-        <label for="password">Password</label>
+        <label>Password</label>
           <input 
             type="password" 
             name="password" 
@@ -84,7 +88,7 @@ function AccountAddForm() {
               setPassword(event.target.value);
             }}
           /> <br />
-        <input type="submit" value="Submit" onClick={onSubmit}/>
+        <input type="submit" value="Submit" onClick={onSubmit} />
       </form>
     </div>
   );
@@ -103,11 +107,18 @@ function Login() {
       window.location.reload();
   }
 
+  function handleLogin(event) {
+    event.preventDefault();
+    return (
+      <Landing />
+    );
+  }
+
   return (
-    <div class="login">
+    <div className="login">
           <h1>Login</h1>
-          <form>
-            <label for="email">Email</label>
+          <form onSubmit={handleLogin}>
+            <label>Email</label>
               <input 
                 type="email" 
                 name="email"
@@ -116,7 +127,7 @@ function Login() {
                   setEmail(event.target.value);
                 }} 
               /> <br />
-            <label for="password">Password</label>
+            <label>Password</label>
               <input 
                 type="password" 
                 name="password" 
