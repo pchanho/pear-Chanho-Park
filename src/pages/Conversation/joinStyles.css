@@ -6,61 +6,86 @@
 }
 
 #join-heading {
-    padding-top: 100px;
-    padding-bottom: 30px;
-
+    padding-top: 50px;
+    padding-bottom: 0;
     text-align: center;
     margin: 0;
 }
 
 .join-container{
     display: flex;
-    padding: 20px 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 40px 30px;
     align-items: center;
     min-width: 100%;
     overflow-x: auto;
+    justify-content: center;
+    align-content: center;
 }
 
 .join{
     margin: 0;
     padding: 0;
+    margin: 10px 10px;
     border-radius: 30px;
 }
 
+.topic-image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 10%;
+    height: 10%;
+}
+
 .conversation-item {
-    background: white;
+    /*background: white;*/
     text-align: center;
-    margin: 0 2px;
+    align-content: center;
+    margin: 0;
     transition: transform 300ms ease 100ms;
     border-radius: 30px;
-    padding: 70px 70px;
+    width: auto;
+    padding: 0;
+    width: 300px;
+    height: 300px;
     cursor: pointer;
     border: none;
     outline: none;
+    flex: 1 0 21%;
+    font-size: 25px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
 }
+
 
 /*.conversation-item:hover ~ .item {*/
 /*    transform: translateX(25%);*/
 /*}*/
 
 .conversation-item:hover {
-    transform: scale(1.2) !important;
+    transform: scale(1.1) !important;
 }
 
 .btn-join{
     text-align: center;
-    padding: 70px 70px;
-    margin: 0 2px;
+    padding-top: 112px;
+    width: 300px;
+    height: 300px;
+    margin: 10px 10px;
     background: white;
     color: #333;
     text-decoration: none;
     border-radius: 30px;
-    font-size: 30px;
+    font-size: 60px;
     transition: transform 300ms ease 100ms;
 }
 
 .btn-join:hover {
-    transform: scale(1.2) !important;
+    transform: scale(1.1) !important;
 }
 
 .conversation-create{

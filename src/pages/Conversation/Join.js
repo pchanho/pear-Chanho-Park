@@ -2,6 +2,7 @@ import React from 'react';
 import { useConversations} from "../../api";
 import { NavLink } from "react-router-dom";
 import "./joinStyles.css";
+// import Button from '../../components/Button';
 
 
 export default function Join() {
@@ -28,13 +29,13 @@ export default function Join() {
 }
 
 function Conversation(conversation) {
-    const {_id, status, topic, category} = conversation;
-
+    const {_id, status, topic, category, topicImage} = conversation;
     return (
             <div className={`join conversation-${topic}`}  key={topic}>
-                <button className="conversation-item" onClick={'/chat'}>
+                <button className="conversation-item" onClick={'/chat'} style={{backgroundImage: `url(${topicImage})`}}>
+
                     {/*{status}*/}
-                    Topic:<br></br>{topic}<br></br>Category:<br></br>{category}
+                    🏷 {category}<br></br>🗣 {topic}
                     {/*<NavLink to="/chat" className="btn">Join</NavLink>*/}
                 </button>
            </div>
