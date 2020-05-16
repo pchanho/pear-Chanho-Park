@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { addAccount, accountLogin} from "../api";
 import "../accountStyles.css";
+import {NavLink} from "react-router-dom";
 
 export default function Account() {
   return (
@@ -8,7 +9,8 @@ export default function Account() {
       <div class="account">
         <AccountAddForm />
 
-        <Login />        
+        <Login />
+        <NavLink to="/join" className="admin-btn">Admin Login</NavLink>
       </div>
     </section>
   );

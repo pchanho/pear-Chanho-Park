@@ -25,14 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b1df608-f79b-41e5-a70f-3f7bdd2de550" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Support.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/Join.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/Join.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/joinStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/joinStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/accountStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/accountStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +71,7 @@
       <updated>1589542652474</updated>
       <workItem from="1589542653785" duration="1489000" />
       <workItem from="1589601541785" duration="6307000" />
+      <workItem from="1589609814383" duration="1110000" />
     </task>
     <servers />
   </component>
@@ -92,6 +88,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="40" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589607558739">
