@@ -65,10 +65,11 @@ function AccountAddForm() {
               setEmail(event.target.value);
             }}
           /> <br />
-        <label for="datemin">Date of Birth</label>
+        <label for="birthday">Date of Birth</label>
           <input 
             type="date" 
-            min="1960-01-02" 
+            name="birthday"
+            max="1955-01-01" 
             value={birthday}
             onChange={event => {
               setBirthday(event.target.value);
