@@ -91,7 +91,7 @@ export function addAccount(account) {
 
     const endpoint = BASE_URL + `/account/create/`;
     console.log("addAccount");
-    // console.log(author);
+    
     return fetch(endpoint, {
         method: "POST",
         headers: {
