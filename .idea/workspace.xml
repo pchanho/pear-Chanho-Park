@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1df608-f79b-41e5-a70f-3f7bdd2de550" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/info30005-pear-frontend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/accountStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/accountStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/Create.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Conversation/Join.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/Join.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Conversation/joinStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/joinStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Landing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
