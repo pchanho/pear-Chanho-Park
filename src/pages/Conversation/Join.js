@@ -24,8 +24,6 @@ export default function Join() {
                 ))}
                 {/*<NavLink to="/create" className="btn">+</NavLink>*/}
             </div>
-            <div id='help'>Help</div>
-            <div id='report'>Report</div>
         </div>
     );
 }
