@@ -6,14 +6,19 @@ import {NavLink} from "react-router-dom";
 
 export default function Account() {
   return (
-    <section className="forms">
-      <div class="account">
-        <AccountAddForm />
-
-        <Login />
-        <NavLink to="/join" className="admin-btn">Admin Login</NavLink>
+    <div>
+      <div className="Nav-bar">
+        <h2 id="nav-logo-text">Pear</h2>
       </div>
-    </section>
+      <section className="forms">
+        <div class="account">
+          <AccountAddForm />
+
+          <Login />
+          <NavLink to="/join" className="admin-btn">Admin Login</NavLink>
+        </div>
+      </section>
+    </div>
   );
 }
 
@@ -36,7 +41,6 @@ function AccountAddForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    this.props.history.push('/Landing');
   }
 
   return (
@@ -101,12 +105,10 @@ function Login() {
   const [password, setPassword] = useState("");
   
   function onLogin() {
-      accountLogin({
-          email, 
-          password
-      });
-
-      window.location.reload();
+    accountLogin({
+      email, 
+      password
+    });
   }
 
   function handleLogin(event) {

@@ -73,9 +73,3 @@ input:focus, .account-btn:focus {
   color: white;
   font-weight: bold;
 }
-
-
-.footer {
-  bottom: 0;
-  width: 100%;
-}

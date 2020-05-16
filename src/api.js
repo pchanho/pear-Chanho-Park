@@ -127,10 +127,6 @@ export function accountLogin(login) {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-            email, 
-            password
-        })
     }).then(res => window.location.reload());
 }
 
