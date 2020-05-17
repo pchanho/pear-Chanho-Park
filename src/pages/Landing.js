@@ -3,7 +3,8 @@ import "../css/styles.css";
 import logo from "../img/Pear_logo.png";
 import { NavLink } from "react-router-dom";
 
-
+/* function is the opening page for the application containing a description of the app and link to account page 
+*/
 export default function Landing() {
     return (
         <div>

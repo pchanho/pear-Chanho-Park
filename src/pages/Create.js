@@ -13,13 +13,15 @@ export default function Create() {
     )
 }
 
+/* function creates a form and submits form data to the database to be stored 
+*/
 function ConversationAddForm() {
     const [topic, setTopic] = useState("");
     const [category, setCategory] = useState("");
     const [topicImage, setImage] = useState(null);
     var image;
 
-
+    //on submit the function calls the api add conversation function with input parameters 
     function onSubmit() {
         addConversation({
             topic,
@@ -29,12 +31,14 @@ function ConversationAddForm() {
     }
 
     const history = useHistory();
-
+    
+    //on form submit the page is redirected to home  
     function handleSubmit(event) {
         event.preventDefault();
         history.push("/home");
     }
 
+    //JSX for conversation form 
     return (
         <div className="conversation-create">
             <h1>Create a new Conversation - It's Easy!</h1>
