@@ -23,16 +23,11 @@ For the core functionalities that your group has chosen, please write 2-3 senten
 
 
 ### Question 5
-#### Account
+### Account
 
 ### Question 6
-#### Conversation
+### Conversation
 
 
-### Landing Page
-### Account Page
-### Home Page
-### Create Conversation Page
-### Chat Page
 
 
