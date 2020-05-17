@@ -1,9 +1,9 @@
 import React from "react";
 import ToolBar from "./ToolBar";
-import "../../chatStyles.css";
+import "../../css/chatStyles.css";
 
 export default function Messages() {
-  return (
+  return ( 
     <div className="message-list">
         <ToolBar title="Conversation Title" />
 

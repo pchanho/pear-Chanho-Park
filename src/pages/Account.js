@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { addAccount, accountLogin} from "../api";
-import "../accountStyles.css";
+import "../css/accountStyles.css";
 import Landing from "./Landing";
 import {NavLink, useHistory} from "react-router-dom";
 
@@ -15,7 +15,6 @@ export default function Account() {
           <AccountAddForm />
 
           <Login />
-          <NavLink to="/home" className="admin-btn">Admin Login</NavLink>
         </div>
       </section>
     </div>
@@ -28,22 +27,31 @@ function AccountAddForm() {
   const [email, setEmail] = useState("");
   const [birthday, setBirthday] = useState("");
   const [password, setPassword] = useState("");
-  
-  function onSubmit() {
-    addAccount({
+ 
+
+  let history = useHistory();
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var res
+    res = await addAccount({
       firstName,
       lastName,
       email, 
       birthday, 
       password
     });
-  }
-
-  let history = useHistory();
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    history.push("/home");
+    console.log(res)
+    if(res != null ){
+      if (res.data == "True"){
+        history.push("/home");
+      }
+      else{
+        alert("failed to create account")
+      }
+    }
+    
+    
   }
 
   return (
@@ -97,7 +105,7 @@ function AccountAddForm() {
               setPassword(event.target.value);
             }}
           /> <br />
-        <input type="submit" value="Submit" className='account-btn' onClick={onSubmit}/>
+        <input type="submit" value="Submit" className='account-btn' />
       </form>
     </div>
   );
@@ -119,21 +127,25 @@ function Login() {
   async function handleLogin(event) {
     event.preventDefault();
 
-    const prom = Promise.resolve(await accountLogin({email, password}));
+    // const prom =  accountLogin({email, password})
 
-    let thenProm = prom.then(value => {
-        alert(value);
-    });
+
 
     //alert(await accountLogin({email, password}));
     //alert(then(value => {await accountLogin({email, password})}));
-    /*
+    
     //if email and password found function returns true 
-    if ( await accountLogin({email, password})) {
-      history.push("/home");
+    var res
+    res = (await accountLogin({email, password}))
+    console.log(res)
+    if (res != null){
+      if ( res.data== "True") {
+        history.push("/home");
+      }
+      else{
+        alert("Invalid Login")
+      }
     }
-    */
-
   }
 
   return (
