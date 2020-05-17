@@ -7,11 +7,14 @@ import { useState, useEffect } from "react";
 // const BASE_URL = "https://info30005-pear.herokuapp.com";
 
 //Temporary base url before update heroku server
-const BASE_URL = "https://info30005-pear.herokuapp.com";
+//const BASE_URL = "https://info30005-pear.herokuapp.com";
+const BASE_URL = "http://localhost:3001";
+
+
 
 function getConversations() {
     const endpoint = BASE_URL + '/conversation/readAll';
-    console.log("getConversations");
+    console.log(getConversations);
     return fetch(endpoint).then(res => res.json());
 }
 
@@ -107,7 +110,7 @@ export function addAccount(account) {
     }).then(res => window.location.reload());
 }
 
-export function accountLogin(login) {
+export async function accountLogin(login) {
     const { email, password } = login;
     if (!email || !password) {
         alert("must include all fields");
@@ -121,13 +124,45 @@ export function accountLogin(login) {
 
     const endpoint = BASE_URL + `/account/login/`;
     console.log("login");
-
+/*
+    const result = async () =>
+        await fetch(endpoint, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        })
+    .then(res => (res.ok ? res : Promise.reject(res)))
+    .then(res => res.json());
+    return result;
+*/
+/*
     return fetch(endpoint, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
         },
     }).then(res => window.location.reload());
+    */
+
+    return await fetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            email,
+            password
+        })
+    }).then(res => res.json)
+    .then(data => {
+        alert(data);
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    
 }
 
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { addAccount, accountLogin} from "../api";
 import "../accountStyles.css";
 import Landing from "./Landing";
-import {NavLink} from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
 
 export default function Account() {
   return (
@@ -39,8 +39,11 @@ function AccountAddForm() {
     });
   }
 
+  let history = useHistory();
+
   function handleSubmit(event) {
     event.preventDefault();
+    history.push("/home");
   }
 
   return (
@@ -103,19 +106,34 @@ function AccountAddForm() {
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+  /*
   function onLogin() {
     accountLogin({
       email, 
       password
     });
   }
+*/
+  let history = useHistory();
 
-  function handleLogin(event) {
+  async function handleLogin(event) {
     event.preventDefault();
-    return (
-      <Landing />
-    );
+
+    const prom = Promise.resolve(await accountLogin({email, password}));
+
+    let thenProm = prom.then(value => {
+        alert(value);
+    });
+
+    //alert(await accountLogin({email, password}));
+    //alert(then(value => {await accountLogin({email, password})}));
+    /*
+    //if email and password found function returns true 
+    if ( await accountLogin({email, password})) {
+      history.push("/home");
+    }
+    */
+
   }
 
   return (
@@ -140,7 +158,7 @@ function Login() {
                   setPassword(event.target.value);
                 }}
               /> <br />
-            <button type="submit" onClick={onLogin} className='account-btn'>Login</button>
+            <button type="submit" className='account-btn'>Login</button>
           </form>
         </div>
   );
