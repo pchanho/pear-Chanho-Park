@@ -7,7 +7,7 @@ import { addMessage, getMessages, useMessages} from "../api.js";
 
 
 export default function Chat(data) {
-  {/* conversationId is hardcoded as this page is not fully finished */}
+  //conversationId is hardcoded as this page is not fully finished
   data = {conversationId: "5eae207c2630d000173c63d6"}
   var { loading, messages, error } = useMessages(data);
     if (loading) {
@@ -28,24 +28,24 @@ export default function Chat(data) {
         </div>
         <div className = "chat-page">
           
-          {/*Shows profile picture of the user we are currently talking to*/}
+          //Shows profile picture of the user we are currently talking to
           <div className = "grid-item user-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589694061/pear/profile_hdtz1k.png)`}}>
             Talking to:
           </div>
           
-          {/*div where all messages from conversation is displayed*/}
+          //div where all messages from conversation is displayed
           <div className = "grid-item message-display">
             {messages.map(messages => (
               <Message key={messages.text} {...messages} />
             ))}
           </div>
           
-          {/*display picture of conversation topic*/}
+          // display picture of conversation topic
           <div className = "grid-item topic-display" style={{backgroundImage: `url(${topicImage})`}}>
             Talking about:
           </div>
           
-          {/*this div contains form for user to insert their message to be sent*/}
+          //this div contains form for user to insert their message to be sent
           <div className = "grid-item message-form">
             <MessageForm />
           </div>
