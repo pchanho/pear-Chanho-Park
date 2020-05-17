@@ -3,7 +3,7 @@ import { useConversations} from "../api";
 import { NavLink, useHistory } from "react-router-dom";
 import "../css/homeStyles.css";
 
-
+// Present conversation list, conversation creation
 export default function Home() {
     const { loading, conversations, error } = useConversations();
     if (loading) {
@@ -26,11 +26,13 @@ export default function Home() {
     );
 }
 
+// Fetch conversation data from mongoDB
 function Conversation(conversation) {
     const {_id, status, topic, category, topicImage} = conversation;
 
     const history = useHistory();
-
+    
+// Store topicImage on user click and redirect to chat page
     function handleClick(event) {
       event.preventDefault();
       history.push("/chat");
@@ -47,13 +49,6 @@ function Conversation(conversation) {
       >
         🏷 {category}<br></br>🗣 {topic}
       </button>
-
-
-
-
-
-        // onClick={storeCurrentConversation(conversation)}
-
     );
 }
 
