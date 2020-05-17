@@ -46,3 +46,18 @@ Examiners are welcome to use the demo account we have made to test our authentif
 
 ### Question 6
 ### Conversation
+The conversation system home page is the first point of access for a user after they create or log in to their account. The conversation system allows users to create conversations based on a topic or join an existing conversation. If the user desires to create a new conversation, symbolised by the (+) button, the user is propted to fill in a form including a topic and conversation picture. Otherwise, the user can join an exisiting conversation where they will be directed to the given chat page for that conversation. 
+
+Create conversaton Page
+  -	Requires users to enter a category and topic as input
+  -	Users can also optionally upload a conversation picture
+  -	In the case that a user does not want to upload an image or an image upload error occurs, a default image will be used in place.
+
+Home Page
+  -	Displays the various conversations buttons that users can click to join
+  -	Users can view the topic, category and topic image on these buttons to preview the conversation before they enter.
+
+Chat Page:
+  -	Displays a messaging UI that will faciliate a conversation
+  -	Displays the conversation image
+  -	messages are currently hardcoded but will be implemented for the final product
