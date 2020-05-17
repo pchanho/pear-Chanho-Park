@@ -1,6 +1,6 @@
 import React from "react";
 
-// This footer explains Pear team member and copyright of website
+// Footer explains Pear team member and copyright of website
 export default function Footer() {
     return (
         <footer>
