@@ -29,12 +29,12 @@ Account system allows users to create and manage their account utilising passwor
 
 Create account form 
   -	Requires user to input all fields (first name, last name, email, birthday, and password)
-  -	The user is required to be older than 65 years, must input a relevant email address and       the password is stored as a hash 
-  -	Access to the sight is only available with successful account creation (redirect to home       page)
+  -	The user is required to be older than 65 years, must input a relevant email address and the password is stored as a hash 
+  -	Access to the sight is only available with successful account creation (redirect to home page)
 
-  Login form 
-    -	Checks that the input email and password is correct and present in the database
-    -	Only allows user access to the account if credentials match (redirect to home page)
+Login form 
+  -	Checks that the input email and password is correct and present in the database
+  -	Only allows user access to the account if credentials match (redirect to home page)
 
 ### Question 6
 ### Conversation
