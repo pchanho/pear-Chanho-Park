@@ -1,3 +1,4 @@
+// Import necessary libraries
 import React, { useState } from "react";
 import Messages from '../components/chat/Messages';
 import "../css/chatStyles.css";
@@ -6,6 +7,7 @@ import { addMessage, getMessages, useMessages} from "../api.js";
 
 
 export default function Chat(data) {
+  //conversationId is hardcoded as this page is not fully finished
   data = {conversationId: "5eae207c2630d000173c63d6"}
   var { loading, messages, error } = useMessages(data);
     if (loading) {
@@ -25,20 +27,25 @@ export default function Chat(data) {
           Chat (Not Fully Implemented)
         </div>
         <div className = "chat-page">
+          
+          //Shows profile picture of the user we are currently talking to
           <div className = "grid-item user-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589694061/pear/profile_hdtz1k.png)`}}>
             Talking to:
           </div>
-
+          
+          //div where all messages from conversation is displayed
           <div className = "grid-item message-display">
             {messages.map(messages => (
               <Message key={messages.text} {...messages} />
             ))}
           </div>
-
+          
+          // display picture of conversation topic
           <div className = "grid-item topic-display" style={{backgroundImage: `url(${topicImage})`}}>
             Talking about:
           </div>
-
+          
+          //this div contains form for user to insert their message to be sent
           <div className = "grid-item message-form">
             <MessageForm />
           </div>
@@ -50,12 +57,14 @@ export default function Chat(data) {
 
 
 function MessageForm() {
+   //assign the proper inputs from form
    const [conversationId, setConversatioId] = useState("");
    const [senderId, setSenderId] = useState("");
    const [text, setText] = useState("");
    const [image, setImage] = useState("");
    const [video, setVideo] = useState("");
-
+  
+  //on submit, add message to mongoDB database
   function onSubmit() {
     addMessage({
       conversationId,
@@ -92,6 +101,10 @@ function MessageForm() {
   );
 }
   
+  /* This function is created to display all messages from a specific conversation stored in the mongoDb
+     database. However, as this section of the code is not yet fully implemented, conversation is still 
+     hardcoded.
+  */
   function Message(message) {
     const {_id, conversationId, senderId, text, image, video, timeSent} = message;
     
@@ -99,8 +112,6 @@ function MessageForm() {
       <section className='join'>
           <div className={`chat-room conversation-${text}`}  key={text}>
             <div>
-                {/*{_id}*/}
-               
                 <br></br>
                   {senderId}:
                 <br></br>
