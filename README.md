@@ -19,11 +19,6 @@ The web application we have implemented include several pages:
   
   
 ### Question 4
-For the core functionalities that your group has chosen, please write 2-3 sentences describing each functionality. You can describe what functions each feature achieves, inputs, and outputs. 
-
-
-### Question 5
-### Account
 
 Account system allows users to create and manage their account utilising password encryption for account security. Accounts are then securely checked for email and password verification before access is granted to the user into the application. The account page contains two forms, one for create an account and the other for logging into a users account. 
 
@@ -36,26 +31,21 @@ Login form
   -	Checks that the input email and password is correct and present in the database
   -	Only allows user access to the account if credentials match (redirect to home page)
 
+Conversation system handles the creation of a new conversation and joining existing conversations regarding a particular topic and proivdes access to all messages within the conversation.
+
+### Question 5
+### Account
+
+
 ### Question 6
-The conversation system allows users to create create conversations based on a topic, once this has been done, 2 participants can join a chat room and have a conversation. Initially our team decided to group the message functionality and the conversation functionality into one big function in our deliverable 2. However, we realised that the scope of the tasks involved was too large and as a result decided to tackle the conversations aspect of our application as the second feature to be implemented. We will detail the features involved below
-
-Create conversaton Page
-  -	Requires users to enter a category and topic as input
-  -	Users can also optionally upload a conversation picture
-  -	In the case that a user does not want to upload an image or an image upload error occurs, a default image will be used in place.
-
-Home Page
-  -	Displays the various conversations buttons that users can click to join
-  -	Users can view the topic, category and topic image on these buttons to preview the conversation before they enter.
-
-Chat Page:
-  -	Displays a messaging UI that will faciliate a conversation
-  -	Displays the conversation image
-  -	messages are currently hardcoded but will be implemented for the final product
-
-
 ### Conversation
 
+/home
 
+
+/create
+
+
+/chat
 
 
