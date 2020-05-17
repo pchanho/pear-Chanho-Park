@@ -25,6 +25,17 @@ For the core functionalities that your group has chosen, please write 2-3 senten
 ### Question 5
 ### Account
 
+Account system allows users to create and manage their account utilising password encryption for account security. Accounts are then securely checked for email and password verification before access is granted to the user into the application. The account page contains two forms, one for create an account and the other for logging into a users account. 
+
+Create account form 
+  -	Requires user to input all fields (first name, last name, email, birthday, and password)
+  -	The user is required to be older than 65 years, must input a relevant email address and       the password is stored as a hash 
+  -	Access to the sight is only available with successful account creation (redirect to home       page)
+
+  Login form 
+    -	Checks that the input email and password is correct and present in the database
+    -	Only allows user access to the account if credentials match (redirect to home page)
+
 ### Question 6
 ### Conversation
 
