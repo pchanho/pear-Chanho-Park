@@ -8,24 +8,17 @@ import axios from 'axios';
 
 //Temporary base url before update heroku server
 const BASE_URL = "https://info30005-pear.herokuapp.com";
-// const BASE_URL = "http://localhost:3001";
 
-
-
+/* retrieve conversation from backend 
+*/
 function getConversations() {
     const endpoint = BASE_URL + '/conversation/readAll';
     console.log(getConversations);
     return fetch(endpoint).then(res => res.json());
 }
 
-// export function getConversation(id) {
-//     const endpoint = BASE_URL + `/conversation/readOne/${id}`;
-//     console.log("getConversation");
-//     return fetch(endpoint).then(res => {
-//         console.log(res);
-//     });
-// }
-
+/* wrapper for get conversations 
+*/
 export function useConversations() {
     const [loading, setLoading] = useState(true);
     const [conversations, setConversations] = useState([]);
@@ -51,7 +44,8 @@ export function useConversations() {
     };
 }
 
-
+/* add conversation to the database 
+*/
 export function addConversation(conversation) {
     const { topic, category, image } = conversation;
     if (!topic || !category) {
@@ -70,13 +64,15 @@ export function addConversation(conversation) {
 
     const endpoint = BASE_URL + `/conversation/create/`;
     console.log("addConversation");
-    // console.log(author);
+    
     return fetch(endpoint, {
         method: "POST",
         body: data
     }).then(res => window.location.reload());
 }
 
+/* add account to the database 
+*/ 
 export function addAccount(account) {
     const { firstName, lastName, email, birthday, password } = account;
     if (!firstName || !lastName || !email || !birthday || !password) {
@@ -108,21 +104,10 @@ export function addAccount(account) {
         });
     });
 
-    // return fetch(endpoint, {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify({
-    //         firstName,
-    //         lastName,
-    //         email,
-    //         birthday,
-    //         password
-    //     })
-    // }).then(res => window.location.reload());
 }
 
+/* attempts to log into the account 
+*/
 export async function accountLogin(login) {
     const { email, password } = login;
     if (!email || !password) {
@@ -138,6 +123,7 @@ export async function accountLogin(login) {
     const endpoint = BASE_URL + `/account/login/`;
     console.log("login");
 
+    //returns the status of the login (true, false)
    return new Promise( function(resolve) {
         axios({
             method: 'post',
@@ -157,6 +143,9 @@ export async function accountLogin(login) {
 /*----------------
  Message API
 ----------------*/
+
+/* add message to the database 
+*/
 export function addMessage(message) {
     const {conversationId, senderId, text, image, video } = message;
     if (!conversationId || !senderId || !text) {
@@ -181,6 +170,8 @@ export function addMessage(message) {
     }).then(res => window.location.reload());
 }
 
+/* gets messages based on conversation id 
+*/
 function getSpecific(data) {
 
 
@@ -202,20 +193,16 @@ function getSpecific(data) {
     }).then(res => res.json());
 }
 
+/* gets all messages from database 
+*/
 function getMessages() {
     const endpoint = BASE_URL + '/message/readAll';
     console.log("getMessages");
     return fetch(endpoint).then(res => res.json());
 }
 
-// export function getConversation(id) {
-//     const endpoint = BASE_URL + `/conversation/readOne/${id}`;
-//     console.log("getConversation");
-//     return fetch(endpoint).then(res => {
-//         console.log(res);
-//     });
-// }
-
+/* wrapper for get messages 
+*/
 export function useMessages(data) {
     const [loading, setLoading] = useState(true);
     const [messages, setMessages] = useState([]);
