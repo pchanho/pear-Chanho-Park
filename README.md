@@ -33,21 +33,6 @@ Login form
 
 Conversation system handles the creation of a new conversation and joining existing conversations regarding a particular topic and proivdes access to all messages within the conversation.
 
-### Question 5
-### Account
-User starts at landing page (not included as part of any functionality)
-(heroku)/ 
-
-After user clicks on "Join", user will be redirected to (heroku)/account.
-Here there will be 2 options, to create new account and fill in the forms with an appropriate email (checked by the presence of @ in the email input section). 
-Examiners are welcome to use the demo account we have made to test our authentification:
-  - email: sally@gmail.com
-  - password: sally
-
-### Question 6
-### Conversation
-The conversation system home page is the first point of access for a user after they create or log in to their account. The conversation system allows users to create conversations based on a topic or join an existing conversation. If the user desires to create a new conversation, symbolised by the (+) button, the user is propted to fill in a form including a topic and conversation picture. Otherwise, the user can join an exisiting conversation where they will be directed to the given chat page for that conversation. 
-
 Create conversaton Page
   -	Requires users to enter a category and topic as input
   -	Users can also optionally upload a conversation picture
@@ -61,3 +46,18 @@ Chat Page:
   -	Displays a messaging UI that will faciliate a conversation
   -	Displays the conversation image
   -	messages are currently hardcoded but will be implemented for the final product
+
+### Question 5
+### Account
+User starts at landing page (not included as part of any functionality)
+https://info30005-pear-frontend.herokuapp.com/ 
+
+After user clicks on "Join", user will be redirected to https://info30005-pear-frontend.herokuapp.com/account.
+Here there will be 2 options, to create new account and fill in the forms with an appropriate email. 
+Examiners are welcome to use the demo account we have made to test our authentification:
+  - email: sally@gmail.com
+  - password: sally
+
+### Question 6
+### Conversation
+The conversation system home page is the first point of access for a user after they create or log in to their account. The conversation system allows users to create conversations based on a topic or join an existing conversation. If the user desires to create a new conversation, symbolised by the (+) button, the user is propted to fill in a form including a topic and conversation picture. Otherwise, the user can join an exisiting conversation where they will be directed to the given chat page for that conversation. 
