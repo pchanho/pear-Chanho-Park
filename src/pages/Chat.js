@@ -28,24 +28,24 @@ export default function Chat(data) {
         </div>
         <div className = "chat-page">
           
-          //Shows profile picture of the user we are currently talking to
+          
           <div className = "grid-item user-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589694061/pear/profile_hdtz1k.png)`}}>
             Talking to:
           </div>
           
-          //div where all messages from conversation is displayed
+          
           <div className = "grid-item message-display">
             {messages.map(messages => (
               <Message key={messages.text} {...messages} />
             ))}
           </div>
           
-          // display picture of conversation topic
+          
           <div className = "grid-item topic-display" style={{backgroundImage: `url(${topicImage})`}}>
             Talking about:
           </div>
           
-          //this div contains form for user to insert their message to be sent
+          
           <div className = "grid-item message-form">
             <MessageForm />
           </div>
