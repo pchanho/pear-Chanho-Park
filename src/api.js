@@ -1,13 +1,13 @@
-/*TODO
-*  1. Login feature
-*  2. */
-
 import { useState, useEffect } from "react";
 import FormData from "form-data"
-import axios from 'axios';
 
-//Temporary base url before update heroku server
+//Link to mongoDB backend server
 const BASE_URL = "https://info30005-pear.herokuapp.com";
+
+
+/*!*-------------*/
+/* 	Conversation */
+/*-------------*!*/
 
 /* retrieve conversation from backend 
 */
@@ -69,161 +69,4 @@ export function addConversation(conversation) {
         method: "POST",
         body: data
     }).then(res => window.location.reload());
-}
-
-/* add account to the database 
-*/ 
-export function addAccount(account) {
-    const { firstName, lastName, email, birthday, password } = account;
-    if (!firstName || !lastName || !email || !birthday || !password) {
-        alert("must include all fields");
-        return null;
-    }
-
-    console.log({
-        firstName,
-        lastName
-    });
-
-    const endpoint = BASE_URL + `/account/create/`;
-    console.log("addAccount");
-
-    return new Promise( function(resolve) {
-        axios({
-            method: 'post',
-            url: endpoint,
-            data: {
-                firstName,
-                lastName,
-                email,
-                birthday,
-                password
-            }
-        }).then(function(json) {
-            resolve(json);
-        });
-    });
-
-}
-
-/* attempts to log into the account 
-*/
-export async function accountLogin(login) {
-    const { email, password } = login;
-    if (!email || !password) {
-        alert("must include all fields");
-        return null;
-    }
-
-    console.log({
-        email,
-        password
-    });
-
-    const endpoint = BASE_URL + `/account/login/`;
-    console.log("login");
-
-    //returns the status of the login (true, false)
-   return new Promise( function(resolve) {
-        axios({
-            method: 'post',
-            url: endpoint,
-            data: {
-                email,
-                password
-            }
-        }).then(function(json) {
-            resolve(json);
-        });
-    });
-}
-
-
-
-/*----------------
- Message API
-----------------*/
-
-/* add message to the database 
-*/
-export function addMessage(message) {
-    const {conversationId, senderId, text, image, video } = message;
-    if (!conversationId || !senderId || !text) {
-        alert("must include all fields");
-        return;
-    }
-
-
-    const endpoint = BASE_URL + `/message/create/`;
-    return fetch(endpoint, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            conversationId,
-            senderId,
-            text,
-            image,
-            video
-        })
-    }).then(res => window.location.reload());
-}
-
-/* gets messages based on conversation id 
-*/
-function getSpecific(data) {
-
-
-    const conversationId  = data.conversationId;
-    if (!conversationId) {
-        alert("must include all fields");
-        return;
-    }
-
-    const endpoint = BASE_URL + '/message/readSpecific';
-    return fetch(endpoint, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            conversationId
-        })
-    }).then(res => res.json());
-}
-
-/* gets all messages from database 
-*/
-function getMessages() {
-    const endpoint = BASE_URL + '/message/readAll';
-    console.log("getMessages");
-    return fetch(endpoint).then(res => res.json());
-}
-
-/* wrapper for get messages 
-*/
-export function useMessages(data) {
-    const [loading, setLoading] = useState(true);
-    const [messages, setMessages] = useState([]);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        getSpecific(data)
-            .then(messages => {
-                setMessages(messages);
-                setLoading(false);
-            })
-            .catch(e => {
-                console.log(e);
-                setError(e);
-                setLoading(false);
-            });
-    }, []);
-
-    return {
-        loading,
-        messages,
-        error
-    };
 }

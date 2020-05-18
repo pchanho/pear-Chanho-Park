@@ -1,10 +1,10 @@
 import React from 'react';
 import { useConversations} from "../api";
 import { NavLink, useHistory } from "react-router-dom";
-import "../css/homeStyles.css";
+import "../css/conversationStyles.css";
 
 // Present conversation list, conversation creation
-export default function Home() {
+export default function Conversation() {
     const { loading, conversations, error } = useConversations();
     if (loading) {
         return <p>Loading...</p>;
@@ -19,17 +19,17 @@ export default function Home() {
         <div className="join-container">
           <NavLink to="/create" className="btn-join">+</NavLink>
           {conversations.map(conversation => (
-            <Conversation key={conversation.id} {...conversation} />
+            <ConversationList key={conversation.id} {...conversation} />
             ))}
         </div>
-
+        <div className='btn-help'>Help</div>
 
       </div>
     );
 }
 
 // Fetch conversation data from mongoDB
-function Conversation(conversation) {
+function ConversationList(conversation) {
     const {_id, status, topic, category, topicImage} = conversation;
 
     const history = useHistory();

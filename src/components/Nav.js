@@ -7,16 +7,16 @@ import "../css/styles.css";
 export default function Nav() {
   return (
     <div className="Nav-bar">
-      <h2 id="nav-logo-text">Pear</h2>
+      <NavLink to="/" id="nav-logo-text">Pear</NavLink>
       <nav>
 
-        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/">Home</NavLink>
 
-        <NavLink to="/support">Support</NavLink>
+        <NavLink to="/">About Us</NavLink>
 
-        <NavLink to="/report">Report</NavLink>
+        <NavLink to="#">Contact Us</NavLink>
 
-        <NavLink exact to="/">Sign Out</NavLink>
+        <NavLink exact to="/">Sign In</NavLink>
         {/* add in some kind of sign out */}
 
       </nav>

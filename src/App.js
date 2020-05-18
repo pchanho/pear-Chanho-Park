@@ -1,15 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
-import Account from "./pages/Account";
-import Support from "./pages/Support";
-import Report from "./pages/Report";
-import Home from "./pages/Home";
+import Conversation from "./pages/Conversation";
 import Create from "./pages/Create";
-import Chat from "./pages/Chat";
 import Nav from "./components/Nav";
-import "./css/styles.css";
 import Footer from "./components/Footer";
+import "./css/styles.css";
 
 export default function App() {
   return (
@@ -22,41 +18,22 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Landing />
-          </Route>
-
-          <Route path="/account">
-            <Account />
+            <Footer />
           </Route>
 
           <Route path="/home">
             <Nav />
-            <Home />
-
-          </Route>
-
-          <Route path="/chat">
-            <Nav />
-            <Chat />
+            <Conversation />
+            <Footer />
           </Route>
 
           <Route path="/create">
             <Nav />
             <Create />
-          </Route>
-
-          <Route path="/support">
-            <Nav />
-            <Support />
-          </Route>
-
-          <Route path="/report">
-            <Nav />
-            <Report />
+            <Footer />
           </Route>
 
         </Switch>
-
-        <Footer />
       </div>
     </Router>
   );

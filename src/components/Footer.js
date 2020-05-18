@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer>
                 <p>&copy; Copyright 2020, INFO30005 Pear</p>
-                <p id="member">Gemma Seeley, Chanho Park, Deevesh Shanmuganathan, Dimitri Sadikin, Glenn Phillips</p>
+                <p id="member">Chanho Park, Dimitri Sadikin, Glenn Phillips, Gemma Seeley, Deevesh Shanmuganathan</p>
         </footer>
     );
 }

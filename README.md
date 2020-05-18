@@ -12,7 +12,7 @@ This implementation addresses 2 out of 3 of our core functionalities previously 
 The web application we have implemented include several pages:
   - Landing Page
   - Account Page
-  - Home Page
+  - Conversation Page
   - Create conversaton Page
   - Chat Page
   - and 2 non functioning page support and report (for the final deliverable)
@@ -38,7 +38,7 @@ Create conversaton Page
   -	Users can also optionally upload a conversation picture
   -	In the case that a user does not want to upload an image or an image upload error occurs, a default image will be used in place.
 
-Home Page
+Conversation Page
   -	Displays the various conversations buttons that users can click to join
   -	Users can view the topic, category and topic image on these buttons to preview the conversation before they enter.
 
