@@ -17,11 +17,13 @@ export default function Home() {
       <div className='join-main'>
         <h1 id='join-heading'>Conversation List</h1>
         <div className="join-container">
-          <NavLink to="/create" className="btn-join">Add New Conversation</NavLink>
+          <NavLink to="/create" className="btn-join">+</NavLink>
           {conversations.map(conversation => (
             <Conversation key={conversation.id} {...conversation} />
             ))}
         </div>
+
+
       </div>
     );
 }
